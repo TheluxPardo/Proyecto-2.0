@@ -1,0 +1,182 @@
+// Estilos del Header
+ion-header {
+  ion-toolbar {
+    --background: #3880ff;
+    --color: #ffffff;
+    
+    ion-title {
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+}
+
+// Estilos del Contenido Principal
+.login-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f7fa;
+  padding: 20px;
+}
+
+.login-box {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.form {
+  ion-item {
+    --background: #f8f9fa;
+    --padding-start: 12px;
+    --padding-end: 12px;
+    --border-radius: 8px;
+    --highlight-height: 0;
+    margin-bottom: 16px;
+
+    &::part(native) {
+      border-radius: 8px;
+    }
+
+    ion-icon {
+      color: #6c757d;
+      font-size: 20px;
+    }
+
+    ion-label {
+      color: #495057;
+      font-weight: 500;
+    }
+
+    ion-input {
+      --padding-start: 8px;
+      --padding-top: 12px;
+      --padding-bottom: 12px;
+    }
+  }
+
+  ion-button {
+    --background: #3880ff;
+    --border-radius: 8px;
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+    margin-top: 24px;
+    font-weight: 500;
+    text-transform: none;
+    font-size: 16px;
+  }
+}
+
+.error-message {
+  text-align: center;
+  margin-top: 16px;
+  
+  ion-text {
+    font-size: 14px;
+  }
+}
+
+.links {
+  text-align: center;
+  margin-top: 20px;
+
+  .forgot-link {
+    color: #3880ff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.register-section {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+
+  p {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  ion-button {
+    --border-color: #3880ff;
+    --color: #3880ff;
+    --background: transparent;
+    --background-hover: rgba(56, 128, 255, 0.04);
+    --padding-top: 16px;
+    --padding-bottom: 16px;
+    font-size: 15px;
+  }
+}
+
+// Estilos del Footer
+ion-footer {
+  ion-toolbar {
+    --background: #ffffff;
+    --border-color: #eaeaea;
+  }
+
+  .footer-content {
+    text-align: center;
+    padding: 10px;
+    
+    p {
+      margin: 0;
+      color: #6c757d;
+      font-size: 12px;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 480px) {
+  .login-box {
+    padding: 20px;
+  }
+
+  .header {
+    .logo {
+      width: 60px;
+      height: 60px;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+  }
+
+  .register-section {
+    margin-top: 25px;
+    padding-top: 15px;
+  }
+}

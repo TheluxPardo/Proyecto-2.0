@@ -1,0 +1,84 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto; // Centra el contenedor horizontalmente
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex; // Activa flexbox
+    flex-direction: column; // Alinea los elementos verticalmente
+    align-items: center; // Centra los elementos horizontalmente
+    text-align: center; // Centra el texto dentro de los elementos
+  
+    h1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 20px; // Espaciado entre el título y el resto
+    }
+  
+    p {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 20px; // Espaciado entre el párrafo y otros elementos
+    }
+  
+    button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px 0;
+      background-color: #007bff; // Cambia el color según sea necesario
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #0056b3; // Color al pasar el mouse
+      }
+    }
+  
+    .qr-modal {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
+      display: flex; // Activa flexbox
+      flex-direction: column; // Alinea elementos verticalmente
+      align-items: center; // Centra elementos horizontalmente
+  
+      h2 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px; // Espaciado entre el título y el párrafo
+      }
+  
+      p {
+        font-size: 1rem;
+        color: #666;
+        margin: 10px 0; // Espaciado vertical
+      }
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+      width: 100%; // Asegura que la lista ocupe el ancho completo
+  
+      li {
+        margin: 5px 0;
+  
+        button {
+          width: 100%; // Botón ocupa todo el ancho del li
+          background-color: #28a745; // Cambia el color según sea necesario
+          &:hover {
+            background-color: #218838; // Color al pasar el mouse
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>App Asistencia</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="salir()">
+        <ion-icon name="log-out-outline"></ion-icon>
+        Salir
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <h1>Bienvenido</h1> 
+    <p>{{ nombreCompleto }}</p> <!-- Mostrar el nombre completo del usuario -->
+
+    <div *ngIf="isAuthenticated; else notAuthenticated">
+      <p>Has iniciado sesión como: {{ userType }}</p>
+
+      <ion-button (click)="verAsignaturas()">
+        Ver Asignaturas
+      </ion-button>
+
+      <!-- Lista de asignaturas -->
+      <div *ngIf="showAsignaturas">
+        <ul>
+          <li *ngFor="let asignatura of asignaturas">
+            <ion-button (click)="handleAsignaturaClick(asignatura)">
+              {{ asignatura }}
+            </ion-button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mostrar QR para estudiantes -->
+      <div *ngIf="userType === 'Estudiante' && showQRAlumnos" class="qr-modal">
+        <h2>Mantención</h2>
+        <p>Escanea el código QR para quedar presente:</p>
+        <ion-button (click)="cerrarQR()">Cerrar</ion-button>
+      </div>
+
+      <!-- Mostrar QR para profesores -->
+      <div *ngIf="userType === 'Profesor' && showQR" class="qr-modal">
+        <h2>QR Generado</h2>
+        <p>Escanea este código QR para quedar presente:</p>
+        <qrcode 
+          [qrdata]="'Datos para el QR de asistencia'"
+          [width]="256"
+          [errorCorrectionLevel]="'M'">
+        </qrcode>
+        <ion-button (click)="cerrarQR()">Cerrar</ion-button>
+      </div>
+    </div>
+
+    <ng-template #notAuthenticated>
+      <p>Por favor, inicia sesión para ver el contenido.</p>
+    </ng-template>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-footer>
+
